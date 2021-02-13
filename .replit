@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ program Search/binarysearch.cpp"
+run = "g++ ./Search/Index of first occurrence in sorted/firstoccurrence.cpp"
