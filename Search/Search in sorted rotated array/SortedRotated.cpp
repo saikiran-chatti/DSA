@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int binarysearch(int arr[],int low,int high,int x){
+int binaserysearch(int arr[],int low,int high,int x){
   int middle;
   while(low<=high){
     middle = (low+high)/2;
@@ -27,6 +27,9 @@ int main() {
     scanf("%d",&temp);
     arr[i] = temp;
   }
+  int i = 0;
+  while(arr[i]<arr[i+1])
+    i++;
   
 
   return 0;
