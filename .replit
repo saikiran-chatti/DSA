@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./Search/Index of first occurrence in sorted/firstoccurrence.cpp"
+run = "g++ ./Search/Repeating Elements/RepeatingElements.cpp"

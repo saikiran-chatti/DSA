@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <algorithm>
 using namespace std;
 
@@ -10,6 +10,7 @@ int repeatingElement(int arr[],int n){
       max = arr[i];
     total += arr[i];
   }
+  
   int count = n - max - 1;
   int sum = max * (max + 1)/2;
   for(int i=0;i<n;i++){
