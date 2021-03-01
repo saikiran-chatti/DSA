@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./Search/Repeating Elements/RepeatingElements.cpp"
+run = "g++ ./Search/Misssing and repeating number/MissingAndRepeating.cpp"
