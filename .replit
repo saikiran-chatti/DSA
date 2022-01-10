@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./Search/Misssing and repeating number/MissingAndRepeating.cpp"
+run = "g++ ./'Basic Maths'/'Trailing zeros'/main.cpp; ./a.out"
