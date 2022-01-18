@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./'Basic Maths'/'Prime factors'/main.cpp; ./a.out"
+run = "g++ ./'Bitwise Operators'/'Power of 2'/main.cpp; ./a.out"
