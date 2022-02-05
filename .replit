@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./'Bitwise Operators'/'Power of 2'/main.cpp; ./a.out"
+run = "g++ ./'Bitwise Operators'/'One Odd Occuring'/main.cpp; ./a.out"
