@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./'Bitwise Operators'/'One Odd Occuring'/main.cpp; ./a.out"
+run = "g++ ./'Arrays'/'Largest Element'/main.cpp; ./a.out"
