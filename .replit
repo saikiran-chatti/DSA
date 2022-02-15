@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./'Arrays'/'Largest Element'/main.cpp; ./a.out"
+run = "g++ ./'Arrays'/'Leaders in array'/main.cpp; ./a.out"
