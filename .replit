@@ -1,2 +1,2 @@
 language = "cpp"
-run = "g++ ./'Arrays'/'Frequencies in sorted array'/main.cpp; ./a.out"
+run = "g++ ./'Arrays'/'Trapping rain water'/main.cpp; ./a.out"
