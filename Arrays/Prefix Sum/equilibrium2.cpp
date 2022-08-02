@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-bool equilibrium(int arr[],int n){
-  
-}
-
 int main() {
   int n,sum = 0;
   cin>>n;
