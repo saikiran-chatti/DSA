@@ -1,2 +1,2 @@
-language = "cpp"
-run = "g++ ./'Basic Maths'/'Sieve of eratosthenes'/main.cpp; ./a.out"
+language = "cpp" run =
+	"g++ ./'Basic Maths'/'Sieve of eratosthenes'/main.cpp; ./a.out"
