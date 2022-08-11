@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/longest-palindrome/
+
 class Solution {
 public:
     int longestPalindrome(string s) {
@@ -12,7 +14,7 @@ public:
         for(auto i=umap.begin();i!=umap.end();i++) {
             int temp = i->second;
             
-            if((temp % 2) == 0){
+            if((temp % 2) == 0) {
                 res += temp;
             }
             else if ( (temp) > 1 ) {
