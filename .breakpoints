@@ -7,6 +7,14 @@
         "version": 376,
         "index": 0
       }
+    ],
+    "CSES/PermutationWrong.c++": [
+      {
+        "id": "3f65244f-0a4d-4728-95e4-237ca8aaec5e",
+        "line": 20,
+        "version": 1,
+        "index": 391
+      }
     ]
   }
 }
