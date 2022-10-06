@@ -1,37 +1,25 @@
-#include<iostream>
-using namespace std;
-
-int main() {
-    int n;
+  #include <iostream>
+  using namespace std;
+  
+  int main() {
+    int n,tot = 0;
     cin>>n;
-
-    int check = (n * (n+1))/2;
-    if ((check % 2) != 0) {
-        cout<<"NOT POSSIBLE"<<endl;
-        return 0;        
-    }
-    int a[n/2];    
-    check/=2;
-    cout<<"check: "<<check<<endl;
-    cout<<n/2<<endl;
-    int fsum = 0;    
-    for(int i=0;i<(n/2);i++) {
-        if (fsum <= check) {
-            a[i] = n - i;
-            fsum += (n-i);            
-        }
-    }
-    int l1 = sizeof(a)/sizeof(a[0]);
-    for(int i=l1-1;i>=0;i--)
-        cout<<a[i]<<" ";
-    cout<<endl;
-    for(int i=0;i<(n/2);i++) {
-        int t = a[i];
-        while ( (a[i]-t) > 0 ) {
-            cout<<++t<<" ";
+    
+    set<int> S;
+    
+    int reqSum = (n * (n+1))/4;
+  
+    for(int i=n;i>0;i-=2) {
+      if ( (tot+i) <= reqSum) {
+        s.insert(i);
+        tot+=i;
       }
-    for(int i=1;i<a[0];i++) {
-        cout<<i<<" ";
+      
     }
-    return 0;
-}
+  
+    for(int i: S) {
+      if( i  )
+    }
+  
+    
+  }
