@@ -1,45 +1,45 @@
 #include<iostream>
-#include<map>
+#include<unordered_map>
 
 using namespace std;
 
 int main() {
     string s;
-    pair<char, int> umap;
+    unordered_map<char, int> umap;
 
     cin>>s;
-    int n = s.length();
-    int count = 0;
+    long int n = s.length();
+    long int count = 0;
+    int oddCount = 0;
+    char oddValue = '-';
 
-    for(int i=0;i<n;i++)
+    for(unsigned int i=0;i<n;i++) {
         umap[s[i]]++;
-
-    for(auto u:umap) {
-        cout<<u.first<<" "<<u.second<<endl;
     }
 
-    string nw = "";
-    for(int i=0;i<n;i++)
-        nw+="-";
-    cout<<nw<<endl;
-
     for(auto u: umap) {
-        // cout<<u.first<<" "<<u.second<<endl;
-        int temp = u.second;
+        long int temp = u.second;
         if (temp % 2 == 0)  {
             while(temp>0) {
                 s[n-count-1] = u.first;
                 s[count] = u.first;
-                nw[n-count-1] = u.first;
-                nw[count] = u.first;
-                cout<<n-count-1<<" "<<count<<" "<<u.first<<" "<<nw<<endl;
                 count++;
                 temp-=2;
             }
         } else {
-            s[count] = u.first;
-            nw[count] = u.first;
-            count++;
+            if (++oddCount > 1) {
+                cout<<"NO SOLUTION"<<endl;
+                return 0;
+            }
+            oddValue = u.first;
+        }
+    }
+
+    if (oddCount == 1) {
+        int len = umap[oddValue];
+        s[n/2] = oddValue;
+        for(int i = (n/2) - (len/2);i<=(n/2)+(len/2);i++) {
+            s[i] = oddValue;
         }
     }
 
