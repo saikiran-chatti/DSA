@@ -26,6 +26,6 @@ int main() {
             cout<<"NO"<<endl;
 			continue;
 		}
-        cout<<"YES"<<endl;
+        cout<<"YES "<<endl;
 	}
 }
