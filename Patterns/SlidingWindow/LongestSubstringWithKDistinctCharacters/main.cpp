@@ -12,18 +12,18 @@ int calcLen(unordered_map<char,int> umap) {
     return res;
 }
 
-int findLongestSubstring(string arr,int n,int k) {
+int longestKSubstr(string arr, int k) {
     unordered_map<char,int> umap;
-    int wStart = 0,res = 0,len = 0;
-    
+    int wStart = 0,res = 0,len = 0,n = arr.size();
+    bool check = true;
     for(int i=0;i<n;i++) {
         umap[arr[i]]++;
         len = umap.size();
-
-        if (len <= k) {
+        if (umap.size() <= k) {
             res = max(res,calcLen(umap));
         }
-
+        if (len >=k)
+            check = false;
         while (len > k) {
             char val = arr[wStart];
             umap[val]--;
@@ -36,7 +36,7 @@ int findLongestSubstring(string arr,int n,int k) {
         }
     }
 
-    return res;
+    return check?-1:res;
 }
 
 int main() {
