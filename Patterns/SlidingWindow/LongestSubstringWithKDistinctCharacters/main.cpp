@@ -12,7 +12,7 @@ int calcLen(unordered_map<char,int> umap) {
     return res;
 }
 
-int longestKSubstr(string arr, int k) {
+int findLongestSubstring(string arr, int k) {
     unordered_map<char,int> umap;
     int wStart = 0,res = 0,len = 0,n = arr.size();
     bool check = true;
@@ -47,7 +47,7 @@ int main() {
     cin>>k;
 
     n = str.size();
-    int res = findLongestSubstring(str,n,k);
+    int res = findLongestSubstring(str,k);
     cout<<res<<endl;
 
     return 0;
