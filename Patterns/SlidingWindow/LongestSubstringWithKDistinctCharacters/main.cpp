@@ -3,25 +3,15 @@
 
 using namespace std;
 
-int calcLen(unordered_map<char,int> umap) {
-    int res = 0;
-
-    for(auto a : umap) {
-        res += a.second;
-    }
-    return res;
-}
-
 int findLongestSubstring(string arr, int k) {
     unordered_map<char,int> umap;
     int wStart = 0,res = 0,len = 0,n = arr.size();
     bool check = true;
+
     for(int i=0;i<n;i++) {
         umap[arr[i]]++;
         len = umap.size();
-        if (umap.size() <= k) {
-            res = max(res,calcLen(umap));
-        }
+
         if (len >=k)
             check = false;
         while (len > k) {
@@ -31,9 +21,9 @@ int findLongestSubstring(string arr, int k) {
                 umap.erase(val);
             }
             wStart++;
-            len = umap.size();
-            res = max(res,calcLen(umap));
         }
+        len = umap.size();
+        res = max(res,i-wStart+1);
     }
 
     return check?-1:res;
