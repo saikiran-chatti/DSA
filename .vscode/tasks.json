@@ -1,18 +1,46 @@
+// {
+//   "version": "2.0.0",
+//   "tasks": [
+//     {
+//       "type": "shell",
+//       "label": "g++ build active file",
+//       "command": "g++ -std=c++14 ${file} -o ${fileBasenameNoExtension} && timeout 4s ./${fileBasenameNoExtension}<inputf.in>outputf.in",
+//       "options": {
+//         "cwd": "${fileDirname}"
+//       },
+//       "problemMatcher": ["$gcc"],
+//       "group": {
+//         "kind": "build",
+//         "isDefault": true
+//       }
+//     }
+//   ]
+// }
 {
   "version": "2.0.0",
   "tasks": [
     {
       "type": "shell",
-      "label": "g++ build active file",
-      "command": "g++ -std=c++14 ${file} -o ${fileBasenameNoExtension} && timeout 4s ./${fileBasenameNoExtension}<inputf.in>outputf.in",
+      "label": "Python3 run active file",
+      "command": "python3",
+      "args": [
+        "${file}"
+      ],
       "options": {
         "cwd": "${fileDirname}"
       },
-      "problemMatcher": ["$gcc"],
+      "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
-      }
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "detail": "Runs the active Python file with python3"
     }
   ]
 }

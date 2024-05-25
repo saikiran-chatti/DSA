@@ -8,6 +8,16 @@
       "args": [],
       "cwd": "/Users/jayanthsaikiran/Saikiran/Preparation/DSA/Recursion/Permutations",
       "program": "/Users/jayanthsaikiran/Saikiran/Preparation/DSA/Recursion/Permutations/build/Debug/outDebug"
+    },
+    {
+      "name": "Python3: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [],
+      "pythonPath": "/opt/homebrew/bin/python3",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
