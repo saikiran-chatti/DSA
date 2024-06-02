@@ -1,18 +1,18 @@
-def smallest_contiguous_subarray(nums,s):
-    k = float('inf')
-    initSum = 0
-    j = 0
-    counter = 0
-    for i in range(len(nums)):
-        initSum += nums[i]
-        counter += 1
-        while(initSum >= s):
-            initSum -= nums[j]
-            k = min(counter,k)
-            counter -= 1
-            j += 1
-    if k == float('inf'):
-        return 0
-    return k
+def smallestSubArrayWithGivenSum(arr,s):
+    n = len(arr)
+    sum = 0
+    start = 0
+    res = n
+    for i in range(n):
+        sum += arr[i]
+        while sum >= s:
+            res = min(res,(i-start+1))
+            sum -= arr[start]
+            start += 1
+    return res
+            
 
-print(smallest_contiguous_subarray([3, 4, 1, 1, 6],8))
+arr = list(map(int,input().split()))
+s = int(input())
+res = smallestSubArrayWithGivenSum(arr,s)
+print(res)
