@@ -1,19 +1,15 @@
-def longest_substring(nums,k):
-    s = {}
+def longest_substring(s,k):
+    hMap = {}
     start = 0
     res = 0
-    n = len(nums)
+    n = len(s)
     for i in range(n):
-        if nums[i] in s:
-            s[nums[i]] += 1
-        else:
-            s[nums[i]] = 1
-        while len(s) > k:
-            s[nums[start]] -= 1
-            if s[nums[start]] == 0:
-                del s[nums[start]]
-            start+=1
-        res = max(res,i-start+1)
+        hMap[s[i]] = hMap.get(s[i],0) + 1
+        while len(hMap) > k:
+            res = max(res,i - start)
+            hMap[s[start]] -= 1
+            if hMap[s[start]] <= 0:
+                del hMap[s[start]]
+            start += 1
     return res
-
-print(longest_substring("abcdef",6))
+print(longest_substring("abcdef",3))
