@@ -13,7 +13,7 @@ def findSubArraySum(arr,k):
 
     return res
 
-arr = [1, 3, 2, 6, -1, 4, 1, 8, 2]
-k = 5
+arr = list(int(i) for i in input().split())
+k = int(input())
 res = findSubArraySum(arr,k)
 print(res)
