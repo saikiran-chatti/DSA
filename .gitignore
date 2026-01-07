@@ -1,2 +1,4 @@
 *.in
 .vscode
+input.txt
+output.txt
